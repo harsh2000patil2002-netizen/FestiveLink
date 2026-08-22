@@ -41,10 +41,14 @@ export default function App() {
     scrollTo('#templates');
   };
 
-  const handleSelectTemplate = (t: TemplateInfo) => setSelectedTemplate(t);
+  const handleSelectTemplate = (t: TemplateInfo) => {
+    setSelectedTemplate(t);
+    setSelectedPackage(t.pkg);
+  };
 
   const handleChooseAndPersonalize = (t: TemplateInfo) => {
     setSelectedTemplate(t);
+    setSelectedPackage(t.pkg);
     scrollTo('#personalize');
   };
 
@@ -90,8 +94,11 @@ export default function App() {
 
         <TemplateShowcase
           selectedTemplateId={selectedTemplate?.id ?? null}
+          selectedPackage={selectedPackage}
           onSelectTemplate={handleSelectTemplate}
           onChooseAndPersonalize={handleChooseAndPersonalize}
+          onCreate={onCreate}
+          onBrowsePackages={() => scrollTo('#packages')}
         />
 
         <WhatToSend />

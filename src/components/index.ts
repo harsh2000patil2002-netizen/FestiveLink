@@ -7,6 +7,7 @@ export { default as ComparisonTable } from './ComparisonTable';
 export { default as TemplateShowcase } from './TemplateShowcase';
 export { default as TemplateCard } from './TemplateCard';
 export { default as TemplatePreviewModal } from './TemplatePreviewModal';
+export { default as LiveInvitation } from './LiveInvitation';
 export { default as PersonalizationForm } from './PersonalizationForm';
 export { default as OrderSummary } from './OrderSummary';
 export { default as WhatToSend } from './WhatToSend';
